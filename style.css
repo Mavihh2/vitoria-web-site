@@ -2614,8 +2614,6 @@ h2 span {
         height: 50px;
     }
 
-    .hero h1 {
-        font-size: clamp(3.8rem, 17vw, 5.7rem);
     }
 
     .hero-botoes {
@@ -2853,30 +2851,7 @@ h2 span {
     gap: 45px;
 }
 
-.hero-visual {
-    width: 100%;
-    min-height: 440px;
-    margin: 0 auto;
-
-    transform: none;
-    overflow: hidden;
-}
-
 /* Monitor principal */
-
-.monitor {
-    width: 100%;
-    max-width: 100%;
-    height: 330px;
-
-    position: relative;
-    top: auto;
-    right: auto;
-
-    margin: 0 auto;
-
-    transform: none;
-}
 
 .monitor-conteudo {
     padding: 24px 18px;
@@ -2913,46 +2888,227 @@ h2 span {
 
 /* Celular decorativo */
 
-.celular {
-    width: 115px;
-    height: 230px;
-
-    right: 5px;
-    bottom: -10px;
-
-    padding: 28px 10px 15px;
-
-    transform: rotate(4deg);
-}
-
-.celular img {
-    width: 60px;
-    height: 60px;
-}
-
 .celular strong {
     margin-top: 15px;
     font-size: 14px;
 }
+ 
+/* =================================
+   CORREÇÃO COMPLETA DO HERO MOBILE
+================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.hero {
+    width: 100%;
+    min-height: auto;
+    overflow: hidden;
+}
+
+.hero-grid {
+    width: 100%;
+    min-height: auto;
+
+    padding-top: 130px;
+    padding-bottom: 70px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 55px;
+}
+
+/* Título principal */
+
+.hero h1 {
+    max-width: 100%;
+
+    font-size: clamp(52px, 14vw, 72px);
+    line-height: 0.96;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+}
+
+/* Texto abaixo do título */
+
+.hero-descricao {
+    max-width: 100%;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+/* Botões */
+
+.hero-botoes {
+    width: 100%;
+    flex-direction: column;
+}
+
+.hero-botoes .botao {
+    width: 100%;
+    min-height: 62px;
+
+    font-size: 16px;
+}
+
+/* Benefícios */
+
+.hero-beneficios {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.hero-beneficios article {
+    width: 100%;
+}
+
+.hero-beneficios strong {
+    font-size: 17px;
+}
+
+.hero-beneficios p {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.icone-beneficio {
+    width: 64px;
+    height: 64px;
+
+    font-size: 23px;
+}
+
+/* Área visual */
+
+.hero-visual {
+    width: 100%;
+    max-width: 100%;
+    min-height: 410px;
+
+    margin: 0 auto;
+
+    position: relative;
+
+    transform: none;
+    overflow: visible;
+}
+
+/* Monitor */
+
+.monitor {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 360px;
+
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+
+    margin: 0 auto;
+
+    transform: none;
+}
+
+.monitor-conteudo {
+    min-height: 330px;
+    height: auto;
+
+    padding: 25px 20px 35px;
+}
+
+.mini-logo img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: cover;
+}
+
+.monitor-conteudo > p {
+    margin-top: 22px;
+
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.monitor-conteudo h2 {
+    max-width: 100%;
+
+    margin-top: 14px;
+
+    font-size: 31px;
+    line-height: 1.15;
+
+    overflow-wrap: break-word;
+}
+
+.monitor-botao {
+    margin-top: 24px;
+    padding: 14px 17px;
+
+    font-size: 12px;
+}
+
+.monitor-cards {
+    display: none;
+}
+
+/* Celular decorativo */
+
+.celular {
+    width: 105px;
+    height: 215px;
+
+    right: 8px;
+    bottom: -85px;
+    top: auto;
+    left: auto;
+
+    padding: 28px 9px 14px;
+
+    transform: rotate(3deg);
+}
+
+.celular img {
+    width: 58px;
+    height: 58px;
+}
+
+.celular strong {
+    margin-top: 14px;
+
+    font-size: 14px;
+    text-align: center;
+}
 
 .celular > span {
     font-size: 9px;
+    line-height: 1.4;
+    text-align: center;
 }
 
-/* Círculo decorativo */
+/* Elementos decorativos */
 
 .circulo-tecnologico {
-    width: 360px;
-    height: 360px;
-
-    top: 25px;
-    right: -100px;
+    display: none;
 }
-
-/* Retira os cartões que ocupam espaço demais no celular */
 
 .cartao-online,
 .cartao-responsivo {
     display: none;
 }
+.faixa-destaques {
+    margin-top: 10px;
+}
+.hero *,
+.monitor *,
+.celular * {
+    max-width: 100%;
 }
