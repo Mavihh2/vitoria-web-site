@@ -2751,4 +2751,117 @@ h2 span {
         right: 29px;
     }
 
+    h2{
+    font-size:36px;
+}
+    h3{
+    font-size:28px;
+}
+    p{
+    font-size:18px;
+    line-height:1.8;
+}
+    .projeto-info p{
+    font-size:18px;
+    line-height:1.7;
+}
+    .projeto-info p{
+    font-size:18px;
+    line-height:1.7;
+}
+    .projeto{
+    padding:24px;
+}
+
+    .projeto-info{
+    gap:16px;
+}
+    /* Espaçamento entre as seções */
+.secao {
+    padding: 85px 0;
+}
+
+/* Mais espaço interno nos cards */
+.servico-card,
+.pacote-card,
+.projeto,
+.etapa-processo,
+.comparacao-card {
+    padding: 24px;
+}
+
+/* Espaço entre os cards */
+.servicos-grid,
+.pacotes-grid,
+.portfolio-grid,
+.processo-linha,
+.avulsos-grid {
+    gap: 22px;
+}
+
+/* Botões mais confortáveis para tocar */
+.botao {
+    min-height: 56px;
+    padding: 16px 22px;
+}
+
+/* Campos do formulário maiores */
+.campo input,
+.campo select,
+.campo textarea {
+    min-height: 52px;
+    font-size: 16px;
+}
+
+/* Mais espaço entre os campos */
+.campo {
+    margin-bottom: 26px;
+}
+
+/* Texto das opções do formulário */
+.opcoes-pacote label > span strong {
+    font-size: 16px;
+}
+
+.opcoes-pacote label > span small {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.checkboxes label span {
+    min-height: 54px;
+    font-size: 15px;
+}
+
+/* FAQ mais fácil de ler */
+.pergunta button span {
+    font-size: 21px;
+    line-height: 1.4;
+}
+
+.resposta p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+/* Textos pequenos que estavam difíceis de enxergar */
+.subtitulo {
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.projeto-info p,
+.servico-card > p,
+.pacote-descricao,
+.etapa-processo p,
+.titulo-central > p:last-child,
+.titulo-secao > p {
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Evita conteúdo encostado nas laterais */
+.container {
+    width: calc(100% - 32px);
+}
 }
