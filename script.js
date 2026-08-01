@@ -659,7 +659,7 @@ window.addEventListener("load", function () {
 
                 if (
                     posicao.top
-                    < window.innerHeight
+                    > window.innerHeight
                 ) {
 
                     elemento.classList.add(

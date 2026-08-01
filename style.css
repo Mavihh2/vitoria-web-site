@@ -1465,7 +1465,15 @@ h2 span {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+.projeto-salao {
+    grid-column: 1;
+    grid-row: 3;
+}
 
+.projeto-restaurante {
+    grid-column: 2;
+    grid-row: 3;
+}
 .projeto {
     padding: 12px;
 
@@ -1473,6 +1481,45 @@ h2 span {
     border-radius: 18px;
 
     background: var(--card);
+    
+    color: var(--branco);
+      text-decoration: none;
+      cursor: pointer;
+
+    transition: 0.4s;
+}
+
+.projeto:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(101, 188, 255, 0.4);
+}
+.ver-projeto {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 18px;
+
+    color: var(--azul-claro);
+
+    font-family: var(--fonte-texto);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+.projeto {
+    padding: 12px;
+
+    border: 1px solid var(--linha-branca);
+    border-radius: 18px;
+
+    background: var(--card);
+
+    color: var(--branco);
+    text-decoration: none;
+    cursor: pointer;
 
     transition: 0.4s;
 }
@@ -1483,6 +1530,31 @@ h2 span {
     border-color: rgba(101, 188, 255, 0.4);
 }
 
+.ver-projeto {
+    display: inline-flex;
+    align-items: center;
+
+    margin-top: 18px;
+
+    color: var(--azul-claro);
+
+    font-family: var(--fonte-texto);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.projeto:hover .ver-projeto {
+    color: var(--branco);
+
+    transform: translateX(7px);
+}
+
+.projeto-grande {
+    grid-row: span 2;
+}
 .projeto-grande {
     grid-row: span 2;
 }
@@ -2611,7 +2683,11 @@ h2 span {
     .rodape-grid {
         grid-template-columns: 1fr;
     }
-
+    .projeto-salao,
+    .projeto-restaurante {
+    grid-column: auto;
+    grid-row: auto;
+    }
     .seta-transformacao {
         transform: rotate(90deg);
     }
