@@ -1267,19 +1267,19 @@ h2 span {
 .pacotes {
     background: var(--preto-claro);
 }
-
 .pacotes-grid {
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
     gap: 20px;
 }
-
 .pacote-card {
-    min-height: 860px;
-
     position: relative;
 
-    padding: 42px;
+    min-height: 0;
+    height: auto;
+
+    padding: 28px;
 
     display: flex;
     flex-direction: column;
@@ -1329,8 +1329,8 @@ h2 span {
 }
 
 .pacote-icone {
-    width: 64px;
-    height: 64px;
+    width: 54px;
+    height: 54px;
 
     display: grid;
     place-items: center;
@@ -1340,13 +1340,12 @@ h2 span {
 
     color: var(--azul-claro);
 
-    font-size: 26px;
+    font-size: 22px;
 
     background: rgba(33, 140, 255, 0.06);
 }
-
 .pacote-tipo {
-    margin-top: 30px;
+    margin-top: 22px;
 
     color: var(--azul-claro);
 
@@ -1354,40 +1353,39 @@ h2 span {
     font-weight: 700;
     letter-spacing: 2px;
 }
-
 .pacote-card h3 {
-    margin-top: 12px;
-
-    font-size: 37px;
+    margin-top: 10px;
+    font-size: 32px;
 }
 
 .pacote-descricao {
-    margin-top: 15px;
+    margin-top: 12px;
 
     color: var(--cinza);
 
-    font-size: 12px;
-    line-height: 1.8;
+    font-size: 11px;
+    line-height: 1.7;
 }
 
 .pacote-card ul {
-    margin: 30px 0;
+    margin: 22px 0;
 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 0 20px;
+    gap: 0 18px;
 
     list-style: none;
 }
 
 .pacote-card li {
-    padding: 12px 0;
+    padding: 9px 0;
 
     border-bottom: 1px solid var(--linha-branca);
 
     color: var(--cinza-claro);
 
-    font-size: 10px;
+    font-size: 9px;
+    line-height: 1.5;
 }
 
 .pacote-card li::before {
@@ -1399,7 +1397,7 @@ h2 span {
 }
 
 .pacote-card .botao {
-    margin-top: auto;
+     margin-top: 10px;
 }
 
 /* Avulsos */
@@ -2614,8 +2612,6 @@ h2 span {
         height: 50px;
     }
 
-    }
-
     .hero-botoes {
         flex-direction: column;
     }
@@ -2665,7 +2661,6 @@ h2 span {
     .seta-transformacao {
         transform: rotate(90deg);
     }
-
     .pacote-card {
         padding: 30px 22px;
     }
@@ -2683,13 +2678,6 @@ h2 span {
         grid-column: auto;
         grid-row: auto;
     }
-
-    .projeto-grande .projeto-visual,
-    .projeto-largo .projeto-visual,
-    .projeto-visual {
-        min-height: 420px;
-    }
-
     .linha-campos,
     .opcoes-pacote,
     .checkboxes {
@@ -3111,4 +3099,94 @@ body {
 .monitor *,
 .celular * {
     max-width: 100%;
+}
+.hero-descricao {
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.hero-beneficios strong {
+    font-size: 14px;
+}
+
+.hero-beneficios p {
+    font-size: 13px;
+}
+
+.hero .botao {
+    font-size: 15px;
+}
+
+.seta-transformacao {
+    transform: rotate(90deg);
+    font-size: 42px;
+    margin: 10px 0;
+}
+.portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.projeto,
+.projeto-grande,
+.projeto-largo {
+    width: 100%;
+    max-width: 100%;
+
+    grid-column: auto;
+    grid-row: auto;
+
+    overflow: hidden;
+}
+
+.projeto-visual,
+.projeto-grande .projeto-visual,
+.projeto-largo .projeto-visual {
+    width: 100%;
+    min-height: 300px;
+    height: 300px;
+
+    padding: 24px;
+
+    background-size: cover;
+    background-position: center;
+}
+
+.projeto-visual strong,
+.projeto-grande .projeto-visual strong,
+.projeto-largo .projeto-visual strong {
+    font-size: 34px;
+    line-height: 1.1;
+}
+
+.projeto-info {
+    width: 100%;
+    padding: 22px 12px 14px;
+}
+
+.projeto-info h3 {
+    font-size: 27px;
+}
+
+.projeto-info p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+.seta-transformacao {
+    font-size: 0;
+    transform: none;
+}
+
+.seta-transformacao::after {
+    content: "↓";
+    font-size: 42px;
+    color: var(--azul);
+}
+.pacotes {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+.pacotes .titulo-central {
+    margin-bottom: 38px;
+}
 }
